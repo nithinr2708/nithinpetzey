@@ -1,0 +1,25 @@
+<p>login works!</p>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1>Login</h1>
+    </div>
+
+    <div class="card-body">
+      <div class="row">
+        Username:<input type="text" name="username" [(ngModel)]="username" />
+        <div class="row">
+          password:<input type="text" name="password" [(ngModel)]="password" />
+        </div>
+        <div class="row"></div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <button (click)="signIn()" class="btn btn-outline-success">
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
