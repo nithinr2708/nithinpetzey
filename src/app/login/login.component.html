@@ -1,4 +1,36 @@
-<p>login works!</p>
+<div class="xyz">
+  <img src="../assets/fp.png" />
+</div>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <img src="../assets/petzy1.png" />
+      <br />
+      <p>Log In To Your Account</p>
+      <h6>Welcome back! Please enter your details.</h6>
+    </div>
+
+    <div class="card-body">
+      <div class="row">
+        Email:<input type="email" name="email" [(ngModel)]="user.email" />
+        <!-- <div class="row"> -->
+        <br />
+        Password:<input type="text" name="password" [(ngModel)]="user.password" />
+        <!-- </div> -->
+        <div class="row"></div>
+        </div>
+      <!-- <div class="card-footer"> -->
+      <br /><br />
+      <div class="row">
+        <button (click)="signIn()" class="btn btn-outline-success">
+          Sign in
+        </button>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+<!-- <p>login works!</p>
 <div class="container">
   <div class="card">
     <div class="card-header">
@@ -26,4 +58,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
