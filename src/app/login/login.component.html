@@ -7,9 +7,13 @@
 
     <div class="card-body">
       <div class="row">
-        Username:<input type="text" name="username" [(ngModel)]="username" />
+        Email:<input type="email" name="email" [(ngModel)]="user.email" />
         <div class="row">
-          password:<input type="text" name="password" [(ngModel)]="password" />
+          password:<input
+            type="text"
+            name="password"
+            [(ngModel)]="user.password"
+          />
         </div>
         <div class="row"></div>
       </div>

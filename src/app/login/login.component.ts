@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CognitoService, IUser } from '../cognito.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,14 +11,18 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
-  username:string='';
-  password:string='';
-  signIn() {
-    console.log("username=", this.username, "password=", this.password);
-    if (this.username === 'admin' && this.password === 'root') {
-      console.log('login success');
-    } else {
-      console.log("login failure");
-    }
+  user: IUser;
+  constructor(private router: Router, private cognitoService: CognitoService) {
+    this.user = {} as IUser;
+  }
+  public signIn(): void {
+    this.cognitoService
+      .signIn(this.user)
+      .then(() => {
+        this.router.navigate(['/receptionist']);
+      })
+      .catch(() => {
+        console.log('something wrong with the sign in');
+      });
   }
 }
