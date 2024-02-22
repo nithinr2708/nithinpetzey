@@ -13,15 +13,19 @@ import { CommonModule } from '@angular/common';
 })
 export class RegisterComponent {
   isConfirm: boolean;
+  isNotRegistered:boolean;
   user: IUser;
 
   constructor(private router: Router, private cognitoService: CognitoService){
     this.isConfirm = false;
+    this.isNotRegistered = true;
     this.user = {} as IUser;
   }
   public signUp(): void{
     this,this.cognitoService.signup(this.user).then(() => {
       this.isConfirm = true;
+      this.isNotRegistered=false;
+      
     }).catch(() => {
       console.log("something went wrong with signup")
     })

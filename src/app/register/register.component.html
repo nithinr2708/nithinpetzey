@@ -6,7 +6,7 @@
 
     <div class="card-body">
       <div class="row">
-        email:<input type="text" name="username" [(ngModel)]="user.email" />
+        Email:<input type="text" name="email" [(ngModel)]="user.email" />
         <div class="row">
           password:<input
             type="text"
@@ -48,55 +48,50 @@
   </div>
 </div> -->
 
-
-
-
-
-
 <div class="xyz">
   <img src="../assets/fp.png" />
 </div>
 <div class="container">
-  <div class="card">
+  <div class="card" *ngIf="isNotRegistered">
     <div class="card-header">
       <img src="../assets/petzy1.png" />
       <br />
       <p>Register</p>
       <h6>Please Fill Your Details</h6>
     </div>
- 
+
     <div class="card-body">
       <div class="row">
         email:<input type="text" name="username" [(ngModel)]="user.email" />
-        <br>
+        <br />
         <!-- <div class="row"> -->
-          password:<input
-            type="text"
-            name="password"
-            [(ngModel)]="user.password"
-          />
+        password:<input
+          type="text"
+          name="password"
+          [(ngModel)]="user.password"
+        />
         <!-- </div> -->
         <div class="row"></div>
       </div>
       <!-- <div class="card-footer"> -->
-        <div class="row">
-          <button (click)="signUp()" class="btn btn-outline-success">
-            Register
-          </button>
-        </div>
+      <div class="row">
+        <button (click)="signUp()" class="btn btn-outline-success">
+          Register
+        </button>
+      </div>
       <!-- </div> -->
     </div>
   </div>
- 
+
   <div class="card" *ngIf="isConfirm">
     <div class="card-header">
       <h1>Confirm Email</h1>
     </div>
- 
+
     <div class="card-body">
       <div class="row">
         Code:<input type="text" name="code" [(ngModel)]="user.code" />
- 
+
         <div class="row"></div>
       </div>
       <div class="card-footer">
