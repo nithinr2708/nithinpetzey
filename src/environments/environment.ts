@@ -1,6 +1,6 @@
 export const environment = {
   cognito: {
-    userPoolId: 'ap-south-1_PLWjsJAb4',
-    userPoolWebClientId: 'c2c68dnqbu4t1g6gio5uo6f9l',
+    userPoolId: 'ap-south-1_CIQdUFlbG',
+    userPoolWebClientId: '5rns74g3hqve13dmpfctgblcl8',
   },
 };
